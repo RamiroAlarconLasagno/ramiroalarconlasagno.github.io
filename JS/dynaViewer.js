@@ -215,7 +215,7 @@ $(document).ready(function () {
 
     $.ajax({
         dataType: 'json',
-        url: "http://test.capsa.rfindustrial.com/api/Dynamometers",
+        url: "/Dynas/Dynamometers.json",
         type: 'get',
 
         success: function (pozoList) {
@@ -314,7 +314,7 @@ $(document).ready(function () {
 
                 $.ajax({
                     dataType: 'json',
-                    url: `http://test.capsa.rfindustrial.com/api/Dynamometers/${obj.pozo.name}`,
+                    url: `/Dynas/Pozos/${obj.pozo.name}`,
                     type: 'get',
 
                     success: function (dList) {
