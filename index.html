@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/DynaSheetStyles.css" rel="stylesheet" />
+    <title>Micro Optimus II</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div style="width:100%">
+            <div id="menu" class="flex-container">
+                <div id="cambio-modo" class="flex-item">
+                    Ver como TABLA
+                </div>
+                <div id="usuario" class="flex-item">
+                    @Model.Name
+                </div>
+
+                <div id="info" class="flex-item">
+                    info
+                </div>
+
+            </div>
+        </div>
+        <div id="panel-superior" >
+
+            <div id="panel-izquierdo">
+
+                <div id="view-map" class="hiderable">
+                    <div id="map"></div>
+                </div>
+                <div id="view-table" class="hiderable">
+
+                    <div id="tableContainer" class="hiderable">
+                        <table class="main-table">
+                            <tbody id="main-table">
+                                <tr>
+                                    <th>Pozo</th>
+                                    <th>(GPM)</th>
+                                    <th>Trabajo<br>(Kl x ")</th>
+                                    <th>Fuerza Min<br>(Klibras)</th>
+                                    <th>Fuerza Max<br>(Klibras)</th>
+                                    <th>Diagnóstico</th>
+                                    <th>última Carta</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="panel-derecho">
+                <div id="main-plot-dyna"></div>
+ 
+            </div>
+
+        </div>
+
+        <div id="panel-inferior" >
+            <div id="plot-historico" ></div>
+                           <div id="tablita">
+                    <table class="info-table">
+                        <tbody id="info-table">
+                            <tr> <th>Pozo</th>                   <td id="info-wellname"></td>  </tr>
+                            <tr> <th>(GPM)</th>                  <td id="info-gpm"></td>       </tr>
+                            <tr> <th>Trabajo<br>(Kl x ")</th>    <td id="info-work"></td>      </tr>
+                            <tr> <th>F. Min<br>(Kl)</th>         <td id="info-minforce"></td>  </tr>
+                            <tr> <th>F. Max<br>(Kl)</th>         <td id="info-maxforce"></td>  </tr>
+                            <tr> <th>Diag</th>                   <td id="info-diagnostic"></td></tr>
+                            <tr> <th>Dia</th>                   <td id="info-dia"></td>      </tr>
+                            <tr> <th>Hora</th>                  <td id="info-hora"></td>      </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+        </div>
+    </div>
+
+    <script src="JS/dynaViewer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeEKMp1_TASRqVHHWNCuUZ-9czoQNBKc&callback=iniciarMap"></script>
+
+
+</body>
+
+</html>

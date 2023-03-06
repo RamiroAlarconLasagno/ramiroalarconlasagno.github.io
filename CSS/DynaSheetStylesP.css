@@ -1,0 +1,41 @@
+﻿* {
+    font-family: "Open Sans", verdana, arial, sans-serif;
+    /*margin: auto;*/
+}
+
+
+html, body {
+    height:100%;
+    width: 100%;
+}
+
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+    #menu > * {
+        display: inline;
+        margin: 2px 10px 2px 10px;
+    }
+
+    #info{
+        font-size:large;
+    }
+
+
+@media screen and (max-width:900px) {
+
+    html, body {
+        height: fit-content;
+    }
+    #map {
+        height: 300px;
+        width: 100%;
+    }
+
+ 
+
+    }
